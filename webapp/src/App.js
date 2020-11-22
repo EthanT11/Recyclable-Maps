@@ -27,7 +27,7 @@ function App() {
         };
 
         getAuthState().then();
-    });
+    }, [markers]);
 
   return (
     <div className="App">
