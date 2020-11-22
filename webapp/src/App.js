@@ -26,7 +26,7 @@ function App() {
             setMarkers(res.data)
             console.log(markers);
         })
-    }, [markers]);
+    });
 
   return (
     <div className="App">
