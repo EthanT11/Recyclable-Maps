@@ -9,9 +9,8 @@ import { useState } from 'react'
 // import geocodingConvert from './scripts/geocoding'
 // import geocodingConvert from './scripts/geocoding'
 import submit from './scripts/submit'
- 
 
-console.log(process.env.REACT_APP_GOOGLE_KEY)
+
 function App() {
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
