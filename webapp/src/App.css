@@ -1,0 +1,62 @@
+.App {
+  text-align: center;
+  background-color: #121212;
+  min-height: 100vh;
+}
+
+.title {
+  background-color: #212121;
+  min-height: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /*justify-content: center;*/
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+.Body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 700px;
+  width: 100vh;
+}
+.MapHolder {
+  order: 1;
+  height: 600px;
+  width: 100vh;
+}
+.EntryHolder {
+  order: 2;
+  z-index: 100;
+  position: absolute;
+  bottom: 65px;
+  left: 90vh;
+}
+.Label {
+  font-size: calc(14px + 2vmin);
+  color: white;
+  position: absolute;
+  bottom: 200px;
+  left: 82vh
+}
+.EntryFieldGen {
+  border-radius: 4px;
+  outline: none;
+}
+.search-location-input {
+
+}
+.EntryFieldDes {
+
+}
+.Button{
+
+}
+.button{
+
+}
+
+/* #BB86FC very noice color */
+
