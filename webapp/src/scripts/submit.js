@@ -12,7 +12,7 @@ function submit(query, name, description) {
       console.log(location, name, description)
       axios({
         method: 'post',
-        url: "http://34.71.145.17/api/markers",
+        url: "http://34.122.178.86/api/markers",
         data: {
           'location': location,
           'name': name,
