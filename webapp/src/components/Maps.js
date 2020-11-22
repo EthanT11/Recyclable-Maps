@@ -46,10 +46,21 @@ export class MapContainer extends Component {
           }
         }
         >
-        <Marker
-          onClick={this.onMarkerClick}
-          name={"Mount Pearl"}
-        />
+        {
+          this.props.markers ?
+              this.props.markers.map((marker, i) => (
+                  <Marker
+                      position={{
+                        lat: marker.location[0], lng: marker.location[1]
+                      }}
+                      onClick={this.onMarkerClick}
+                      name={marker.name}
+                      description={marker.description}
+                      key={i}
+                  />
+              )):
+              null
+        }
         <InfoWindow
           marker={this.state.activeMarker}
           visible={this.state.showingInfoWindow}
@@ -57,6 +68,7 @@ export class MapContainer extends Component {
         >
           <div>
             <h4>{this.state.selectedPlace.name}</h4>
+            {this.state.selectedPlace.description}
           </div>
         </InfoWindow>
       </Map>

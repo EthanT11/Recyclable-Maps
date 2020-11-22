@@ -37,7 +37,7 @@ function App() {
       </header>
       <div className="Body">
         <div className="MapHolder">
-          <MapContainer/>
+          <MapContainer markers={markers}/>
         </div>
       </div>
       <div className="Label">Add a new drop-off point!</div>
