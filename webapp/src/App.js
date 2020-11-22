@@ -22,7 +22,7 @@ function App() {
 
         const getAuthState = async () => {
             let res = await axios.get("http://34.122.178.86/api/markers")
-            setMarkers(await res)
+            setMarkers(res)
             console.log(markers);
         };
 
