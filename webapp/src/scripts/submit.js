@@ -21,6 +21,7 @@ function submit(query, name, description) {
       })
         .then((response) => {
           console.log(response);
+          window.location.reload()
         }, (error) => {
           console.log(error);
         });
