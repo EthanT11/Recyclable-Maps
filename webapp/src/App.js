@@ -19,14 +19,12 @@ function App() {
   const [markers, setMarkers]= useState([])
 
 
-    const getAuthState = async () => {
-        let res = await axios.get("http://34.122.178.86/api/markers")
-        setMarkers(res.data)
-        console.log(markers);
-    };
 
     useEffect(() => {
-        getAuthState().then();
+        axios.get("http://34.122.178.86/api/markers")
+        .then(res => {
+            setMarkers(res.data)
+        })
     }, [markers]);
 
   return (
