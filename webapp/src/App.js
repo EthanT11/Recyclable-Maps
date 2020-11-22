@@ -5,16 +5,29 @@ import EntryField2 from './components/EntryField2ElectricBoogalo'
 import EntryField3 from './components/EntryField3ReturnOfTheSith'
 import MapContainer from './components/Maps'
 import SearchLocationInput from './components/SearchLocationInput'
-import { useState } from 'react'
+import {useEffect, useState} from "react";
 // import geocodingConvert from './scripts/geocoding'
 // import geocodingConvert from './scripts/geocoding'
 import submit from './scripts/submit'
-
+import axios from "axios";
+ 
 
 function App() {
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
   const [query, setQuery] = useState("");
+  const [markers, setMarkers]= useState([])
+
+    useEffect(() => {
+
+        const getAuthState = async () => {
+            let res = await axios.get("http://34.122.178.86/api/markers")
+            setMarkers(await res)
+            console.log(markers);
+        };
+
+        getAuthState().then();
+    });
 
   return (
     <div className="App">
