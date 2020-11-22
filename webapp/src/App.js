@@ -24,6 +24,7 @@ function App() {
         axios.get("http://34.122.178.86/api/markers")
         .then(res => {
             setMarkers(res.data)
+            console.log(markers);
         })
     }, []);
 
